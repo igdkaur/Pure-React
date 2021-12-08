@@ -1,0 +1,40 @@
+<!-- function HelloWorld() {
+return (
+<div>Hello World!</div>
+);
+}
+Leaving the HelloWorld component intact for now, create two new
+components: one named Hello and one named World . Hello should render
+<span>Hello</span> and World should render <span>World</span> . You
+can basically copy-and-paste the HelloWorld component and just change the
+text and the function name. -->
+
+
+<body>
+   <div id="root"></div>
+   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+   <script type="text/babel">
+
+   function Hello () {
+      return (
+         <div>Hello</div>
+      )
+   }
+
+   function World () {
+      return (
+         <div>World</div>
+      )
+   }
+     const element = (
+        <>
+      <Hello/> <World/> !
+      </>
+ 
+     )
+     ReactDOM.render(element, document.getElementById('root'))
+   </script>
+ </body>
+ 

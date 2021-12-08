@@ -1,0 +1,48 @@
+<!-- add a ‘Reset’ button to CountingParent 
+that resets the counter to 0 when clicked. 
+Just put the button directly inside CountingParent .
+Once that’s working, refactor your code to move the ‘Reset’ button down into
+Child . -->
+
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+
+    
+    
+
+    function CountingParent () {
+
+      const [count,setCount]=React.useState(0)
+
+      function handleCount () {
+    
+        setCount(count + 1)
+      }
+
+      function handleReset () {
+        setCount(0)
+      }
+
+
+      return (
+        <div>
+          <button onClick = {handleReset}> Reset </button>
+          <button onClick = {handleCount}> Counter </button>
+          <p> you have pressed this button {count} times.</p>
+          
+        </div>
+      )
+
+
+    }
+
+    
+    ReactDOM.render(<CountingParent />, document.getElementById('root'))
+        
+  </script>
+</body> 
